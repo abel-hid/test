@@ -50,9 +50,11 @@ kind: Ingress
 metadata:
   name: my-app-ingress
   namespace: dev
+  annotations:
+    ingress.kubernetes.io/ssl-redirect: "false"
 spec:
   rules:
-  - host: myapp.local
+  - host: localhost
     http:
       paths:
       - path: /
@@ -61,4 +63,4 @@ spec:
           service:
             name: my-app-service
             port:
-              number: 80
+              number: 8888
