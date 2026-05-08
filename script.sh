@@ -1,0 +1,1 @@
+kubectl port-forward -n dev svc/my-app-service 8888:80
