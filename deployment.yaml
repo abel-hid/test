@@ -1,3 +1,4 @@
+# deployment.yaml from https://github.com/abel-hid/test.git
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -15,7 +16,7 @@ spec:
     spec:
       containers:
       - name: app
-        image: guuts/my-app:v1
+        image: guuts/my-app:v2
         ports:
         - containerPort: 8888
         env:
