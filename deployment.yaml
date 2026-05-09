@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: app
-        image: guuts/my-app:v2
+        image: guuts/my-app:v1
         ports:
         - containerPort: 8888
         env:
