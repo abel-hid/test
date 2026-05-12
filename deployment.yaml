@@ -37,10 +37,10 @@ metadata:
   name: my-app-service
   namespace: dev
 spec:
-  type: NodePort            
   selector:
     app: my-app
   ports:
     - protocol: TCP
-      port: 8888          
+      port: 80
       targetPort: 8888
+  type: ClusterIP
