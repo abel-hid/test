@@ -37,11 +37,10 @@ metadata:
   name: my-app-service
   namespace: dev
 spec:
-  type: NodePort              # ← CHANGE THIS
+  type: NodePort             
   selector:
     app: my-app
   ports:
     - protocol: TCP
-      port: 8888              # ← CHANGE to 8888
+      port: 8888             
       targetPort: 8888
-      # nodePort will be auto-assigned (30000-32767)
