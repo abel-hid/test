@@ -1,4 +1,4 @@
-# deployment.yaml from https://github.com/abel-hid/test.git
+# deployment.yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: app
-        image: guuts/my-app:v1
+        image: guuts/my-app:v2
         ports:
         - containerPort: 8888
         env:
@@ -37,10 +37,11 @@ metadata:
   name: my-app-service
   namespace: dev
 spec:
+  type: NodePort              # ← CHANGE THIS
   selector:
     app: my-app
   ports:
     - protocol: TCP
-      port: 80
+      port: 8888              # ← CHANGE to 8888
       targetPort: 8888
-  type: ClusterIP
+      # nodePort will be auto-assigned (30000-32767)
