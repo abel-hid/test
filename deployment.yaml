@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: app
-        image: bilalelidrissi171/bel-idri:v1
+        image: bilalelidrissi171/bel-idri:v2
         ports:
         - containerPort: 8888
         env:
