@@ -51,7 +51,7 @@ metadata:
   name: my-app-ingress
   namespace: dev
 spec:
-  ingressClassName: traefik
+  ingressClassName: traefik #gitlab-nginx for bonus
   rules:
     - http:
         paths:
